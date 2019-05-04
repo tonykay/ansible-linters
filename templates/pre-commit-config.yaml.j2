@@ -1,0 +1,16 @@
+---
+{% if ansible_linters_yamllint_install %}
+- repo: https://github.com/adrienverge/yamllint.git
+  sha: {{ yamllint_version | default ("v1.10.0") }}
+  hooks:
+    - id: yamllint
+{% endif %}
+
+{% if ansible_linters_ansible-lint_install %}
+- repo: https://github.com/ansible/ansible-lint.git
+  sha: {{ ansible-int_version | default ("v4.1.0") }}
+  hooks:
+  - id: ansible-lint
+    files: \.(yaml|yml)$
+{% endif %}
+...
