@@ -3,9 +3,9 @@
   copy:
     src: pre-commit
     dest: "{{ ansible_linters_repo_path }}/.git/hooks/"
-  notify: h_make_pre-commit_hook_executable
+    mode: u+rwx
 
-- name: Setup linters in repo root 
+- name: Setup linters in repo root
   template:
     src: pre-commit-config.yaml.j2
     dest: "{{ ansible_linters_repo_path }}/.pre-commit-config.yaml"
