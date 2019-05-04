@@ -3,6 +3,6 @@ ansible_linters_repo_path:              .
 
 ansible_linters_yamllint_install:       true
 ansible_linters_yamllint_version:       v1.10.0
-ansible_linters_ansible-lint_install:   true
-ansible_linters_ansible-lint_version:   4.1.0
+ansible_linters_ansible_lint_install:   true
+ansible_linters_ansible_lint_version:   4.1.0
 ...

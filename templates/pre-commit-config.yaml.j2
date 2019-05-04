@@ -6,9 +6,9 @@
     - id: yamllint
 {% endif %}
 
-{% if ansible_linters_ansible-lint_install %}
+{% if ansible_linters_ansible_lint_install %}
 - repo: https://github.com/ansible/ansible-lint.git
-  sha: {{ ansible-int_version | default ("v4.1.0") }}
+  sha: {{ ansible_lint_version | default ("v4.1.0") }}
   hooks:
   - id: ansible-lint
     files: \.(yaml|yml)$
