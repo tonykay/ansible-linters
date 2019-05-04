@@ -2,7 +2,7 @@
 - name: Setup pre-commit hook in repo
   copy:
     src: pre-commit
-    dest: "{{ ansible_linters_repo_path }}/git/hooks/"
+    dest: "{{ ansible_linters_repo_path }}/.git/hooks/"
   notify: h_make_pre-commit_hook_executable
 
 - name: Setup linters in repo root 

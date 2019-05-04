@@ -1,6 +1,6 @@
 ---
 - name: h_make_pre-commit_hook_executable
   file: 
-    dest: "{{ ansible_linters_repo_path | default ('./') }}/git/hooks/pre-commit"
+    dest: "{{ ansible_linters_repo_path) }}/.git/hooks/pre-commit"
     mode: +x
 ...
